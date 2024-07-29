@@ -124,12 +124,75 @@ main{
     font-size: 1.8rem;
 }
 
+.sponsors{
+    text-align: center;
+}
+
+.sponsors-img-container img{
+    width: 165px;
+}
+.sponsors-img-container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    align-items: center;
+}
+
+
+.features{
+    display: flex;
+    margin: 50px;
+    justify-content: space-between;
+}
+.feature-content{
+   padding: 40px;
+    margin-right: 40px;
+}
+
+.feature-container-cards2s{
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #dcd7d7;
+    border-radius: 8px;
+    box-shadow: (0 4 30 0) rgba(0 0 0 0.6);
+}
+
+.ten-years{
+    background-color: #FF900E;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    align-items: center;
+    padding-top: 40px;
+    position: relative;
+    bottom: 100px;
+    right: 60px;
+    border-radius: 10px;
+}
+
+.feature-content h1{
+    border-left: #FF900E 5px
+    ;
+}
+.footer-des{
+    color: white;
+    background-color: #a1631c;
+    text-align: center;
+    height: 50px;
+    align-items: center;
+    padding-top: 20px;
+}
 
 /* for mobile phones */
 @media  screen and (max-width:576px) {
     nav,
     .teams-container,
-    .facts-card-container{
+    .facts-card-container,
+    .sponsors-img-container,
+    .features{
         flex-direction: column;
     }
     .teams-img-container{
@@ -138,9 +201,23 @@ main{
     header{
         padding: 20px;
     } 
-    .teams-content{
+    .teams-content,  .facts-card-container,
+    .sponsors{
         padding-right: 20px;
         padding-left: 20px;
+    }
+    .facts-card-container{
+        gap: 15px
+        ;
+    }
+    .facts{
+        padding: 20px;
+    }
+    .sponsors-img-container img{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .features img{
+        width: 100%;
     }
     
 }
@@ -148,11 +225,17 @@ main{
 @media  screen and (min-width:576px) and (max-width:992px) {
     nav,
     .teams-container,
-    .facts
+    .facts,
+    .sponsors-img-container,
+    .features
     {
         flex-direction: column;
     }
     header{
         padding: 50px;
     } 
+    .sponsors-img-container img{
+        grid-template-columns: 2fr;
+    }
+    
 }
